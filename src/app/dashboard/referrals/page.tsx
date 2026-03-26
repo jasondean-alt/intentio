@@ -294,11 +294,11 @@ export default function ReferralsPage() {
                 <select
                   value={formData.contact_id}
                   onChange={(e) => setFormData({ ...formData, contact_id: e.target.value })}
-                  className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  className="w-full px-3 py-2 bg-slate-700 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 >
-                  <option value="">Select a contact...</option>
+                  <option value="" className="bg-slate-700 text-white">Select a contact...</option>
                   {contacts.map((contact) => (
-                    <option key={contact.id} value={contact.id}>
+                    <option key={contact.id} value={contact.id} className="bg-slate-700 text-white">
                       {contact.full_name} {contact.email && `(${contact.email})`}
                     </option>
                   ))}
@@ -309,11 +309,11 @@ export default function ReferralsPage() {
                 <select
                   value={formData.service_id}
                   onChange={(e) => setFormData({ ...formData, service_id: e.target.value })}
-                  className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  className="w-full px-3 py-2 bg-slate-700 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 >
-                  <option value="">Select a service...</option>
+                  <option value="" className="bg-slate-700 text-white">Select a service...</option>
                   {services.map((service) => (
-                    <option key={service.id} value={service.id}>
+                    <option key={service.id} value={service.id} className="bg-slate-700 text-white">
                       {service.name} - {service.category}
                     </option>
                   ))}
@@ -346,10 +346,10 @@ export default function ReferralsPage() {
                   <select
                     value={formData.fee_type}
                     onChange={(e) => setFormData({ ...formData, fee_type: e.target.value })}
-                    className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    className="w-full px-3 py-2 bg-slate-700 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
                   >
-                    <option value="percentage">% of deal</option>
-                    <option value="flat">Flat fee ($)</option>
+                    <option value="percentage" className="bg-slate-700 text-white">% of deal</option>
+                    <option value="flat" className="bg-slate-700 text-white">Flat fee ($)</option>
                   </select>
                 </div>
                 <div>
